@@ -25,7 +25,7 @@ public class Ui implements UiInterface {
     private static final String MESSAGE_ABOUT = "E-Duke-8 is a desktop app that helps CS2113/T students learn and "
             + "understand software engineering and OOP principles through a gamified platform and enhance their "
             + "learning experience. It also consolidates key concepts for easy revision. ";
-    private static final String MESSAGE_GREETINGS = "Hello! I'm E-Duke-8\n What can I do for you?";
+    private static final String MESSAGE_GREETINGS = "Hello! I'm E-Duke-8\nWhat can I do for you?";
     private static final String MESSAGE_EXIT = "Bye bye. Hope you have a nice day and see you soon!";
     private static final String MESSAGE_HELP = "These are the commands that you can used:";
     private static final String MESSAGE_COMMANDS = "1) about\n2) help\n3) topics\n4) textbook\n5) quiz\n6) stats\n"
