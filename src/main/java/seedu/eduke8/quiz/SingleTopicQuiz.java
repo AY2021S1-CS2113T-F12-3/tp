@@ -116,9 +116,9 @@ public class SingleTopicQuiz implements Quiz {
 
             command.execute(optionList, ui);
 
-            //User has to press enter so that the next question will be shown / quiz will end
+            //User has to press enter so that the next question will be shown 
             boolean enterIsUsed = false;
-            while (!enterIsUsed) {
+            while (!enterIsUsed && !quizQuestionsManager.areAllQuestionsAnswered()) {
                 enterIsUsed = ui.getEnterFromUser();
             }
         }

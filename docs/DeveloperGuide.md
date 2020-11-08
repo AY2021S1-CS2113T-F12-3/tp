@@ -2,6 +2,8 @@
 * Table of Contents
 {:toc}
 
+<div style="page-break-after: always;"></div>
+
 ## 1. Introduction
 
 ### 1.1. Software Overview
@@ -26,6 +28,8 @@ You are recommended to use Intellij IDEA to edit the program.
 2. **Import the project as a Gradle project**: Choose the option to import the project as a Gradle project when prompted.
 3. **Verify the setup**: Enter some commands to ensure E-Duke-8 functions as expected. Refer to our [User Guide](https://ay2021s1-cs2113t-f12-3.github.io/tp/UserGuide.html) for more information.
 
+<div style="page-break-after: always;"></div>
+
 ## 2. Design & implementation
 
 ### 2.1. Architecture
@@ -33,6 +37,8 @@ You are recommended to use Intellij IDEA to edit the program.
 The high-level design of our program is based on a 3-tier architecture which consists of the Presentation, Application and Database layers. The Logic component, UI component, Storage component, and Model component can be found in each layer as shown in the architecture diagram below.
 
 ![Architecture](images/Architecture.png)
+
+<div style="page-break-after: always;"></div>
 
 ### 2.2. Model Component
 
@@ -45,13 +51,14 @@ allows us to create various topics with questions, options, hints and explanatio
 in the code for E-Duke-8. As such, many of the commands that manipulate the `TopicList` make 
 use of the package `java.util.ArrayList`. 
 
-The `TopicList` is used to store `Topics`. `Topics` themselves implement the interface `Displayable`. 
+The `TopicList` is used to store `Topic`. `Topic` themselves implement the interface `Displayable`. 
 
 ![TopicList](images/TopicListClassDiagram.png)
 
 There is just 1 command that manipulates the `TopicList`, which is `topics`. The `topics` command shows all the 
 `Topic` objects in the current `TopicList`.
 
+<div style="page-break-after: always;"></div>
 
 #### 2.2.2. Implementation of TopicList
 
@@ -70,6 +77,7 @@ Step 2. The `TopicList.showTopics()` method then calls the method `Ui.printTopic
 Step 3: The `Ui.printTopicList()` method then prints out the number of questions in each topic,
         along with the description of each topic in the `TopicList`. 
 
+<div style="page-break-after: always;"></div>
 
 #### 2.2.3. Design of NoteList
 
@@ -79,6 +87,8 @@ that manipulate the `NoteList` also make use of the package `java.util.ArrayList
 Each topic has an attribute of type `NoteList`, which contains `Note` objects.
 
 ![NoteListClass](images/NoteListClassDiagram.png)
+
+<div style="page-break-after: always;"></div>
 
 #### 2.2.4. Implementation of Notes
 
@@ -124,6 +134,8 @@ specified `NoteList` object.
 Step 2: The `NoteList.delete()` method makes use of the `java.util.ArrayList` package, specifically the `ArrayList.remove()` method, to 
 delete the specified `Note` object in the specified `NoteList` object.
 
+<div style="page-break-after: always;"></div>
+
 #### 2.2.5. Design of Option and OptionList 
 
 The `Option` and `OptionList` classes implements the `Displayable` and `DisplayableList` interfaces respectively. 
@@ -136,6 +148,8 @@ The `Option` class implements the `Displayable` interface while the `OptionList`
 
 The `Option` object stores the description of one option from a question. It also indicates if the option is the correct answer for the question by using the `isCorrectAnswer` boolean. 
 The `OptionList` object stores all 4 options of the same question. 
+
+<div style="page-break-after: always;"></div>
 
 #### 2.2.6. Implementation of Option and OptionList
 
@@ -154,6 +168,8 @@ Step 3. The `SingleTopicQuiz` object then calls the `OptionList` class using the
 Step 4. The `SingleTopicQuiz` object then calls the `Ui` to print out all 4 options using the `printOption(options.get(i), i+1)` method. 
 The `options.get(i)` parameter will get the description of the specific option and the `i+1` parameter will handle the numbering of the options.
 
+<div style="page-break-after: always;"></div>
+
 ### 2.3. Logic Component
 
 The main application logic, such as provisioning quizes, is handled by the Logic component. This component also acts as the middleman between the backend and frontend by processing data before passing it to the user interface and parsing user input from the user interface.
@@ -167,6 +183,8 @@ The main application logic, such as provisioning quizes, is handled by the Logic
 2. This results in a `Command` object, which is executed by `Command` class itself, using the execute() method.
 3. The `Ui` object in the `Command` object is used to display the requested information, or to display the required task 
 to be completed as per the user input.
+
+<div style="page-break-after: always;"></div>
 
 #### 2.3.2. Implementation of MenuParser
 
@@ -200,6 +218,8 @@ Step 4. Each subsequent string separated by a space is stored in a string array 
 Step 5. The string at the 0th index is then used in a switch statement, where each case represents the different menu 
         options available. As such, the contents of the case with reference “help” is run, which is a return statement 
         containing a new `HelpCommand()`. This leads to the execution of the `help` command.
+     
+<div style="page-break-after: always;"></div>
         
 #### 2.3.3. Design of QuizQuestionsManager
 
@@ -214,6 +234,8 @@ An object of `SingleTopicQuiz` class represents an instance of the quiz in E-Duk
 The `startQuiz(:Ui)` method call from the `SingleTopicQuiz` object initializes an object of `QuizQuestionsManager`, by passing into its constructor `QuizQuestionsManager(:int, :ArrayList<Displayable>)`, `numberOfQuestions` for its first parameter and an ArrayList of questions from the `Topic` object for its second parameter. The `QuizQuestionsManager` object will then randomly select `numberOfQuestions` questions from the topic the user has chosen, using its `setQuizQuestions(:int, :ArrayList<Displayable>)` method, where the first parameter will take in `numberOfQuestions` and its second parameter will take in the ArrayList of questions from the `Topic` object passed into the `QuizQuestionsManager` object. 
 
 Thereafter, by making use of `QuizQuestionsManager`'s `getNextQuestion()` and `areAllQuestionsAnswered()` method calls, the `goThroughQuizQuestions(:Ui, :QuizQuestionsManager)` will loop through the questions until the user has answered all of them on the command line interface.
+
+<div style="page-break-after: always;"></div>
 
 #### 2.3.4. Implementation of QuizQuestionsManager
 
@@ -232,7 +254,9 @@ To ensure that no two of the same question is selected, the selected `randomQues
 
 An ArrayList of `Question` objects stores all the selected questions meant for the quiz.
 
-#### 2.3.5 Design of Stats Feature
+<div style="page-break-after: always;"></div>
+
+#### 2.3.5. Design of Stats Feature
 
 E-Duke-8 allows for user’s stats to be shown to the user when requested. These statistics correspond to the results of the user’s past attempts of the quiz. An aggregate result, followed by topical results of the quiz will be displayed. 
 
@@ -250,6 +274,8 @@ An object of `UserStatsCalculator` class is responsible for calculating the aggr
 
 On the other hand, an object of `TopicalStatsCalculator` is used by the object of `Stats` class to calculate the topical results. In its constructor, the `TopicalStatsCalculator` object uses the single `Topic` object passed into it to retrieve its specific `QuestionList` object. Thereafter, by iterating through the questions for the particular `QuestionList` object, the results for individual topics can be calculated with its methods.
 
+<div style="page-break-after: always;"></div>
+
 #### 2.3.6. Implementation of Stats Feature
 
 The current implementation of the stats feature is such that the object of `Stats` class controls what is shown to the user when the `stats` command is received. It calls on methods of a `UserStatsCalculator` object and a `TopicalStatsCalculator` object to calculate and retrieve the statistics of the user’s previous attempts of quizzes in E-Duke-8, before displaying them.
@@ -261,6 +287,8 @@ The sequence diagram below shows the interactions between the different objects 
 Through the logic in the object of `UserStatsCalculator`, necessary information regarding the user’s statistics, such as the `totalPointsGained` integer value and `totalPointsAvailable` integer value, are calculated, and then passed to the `Ui` object to print them to the user. This same concept and procedure are applied to the display the other aggregate results.
 
 A similar procedure is being employed by the `TopicalStatsCalculator` object to calculate the topic-level statistics for the user. The only difference between the objects of these two classes is that instead of iterating through all the topics available, the `TopicalStatsCalculator` object only deals with a particular topic at any point of time. By iterating through the questions of the single topic, it calculates statistics for the topic and returns it back to the `Stats` object, which will then pass them to the `Ui` object to display them to the user. As such, in order to display the user’s statistics for each and every topic, a loop is done in the `Stats` object to repeatedly calculate the topic-level information for all of the topics and displaying them concurrently. 
+
+<div style="page-break-after: always;"></div>
 
 #### 2.3.7. Implementation of Timer Feature
 
@@ -308,6 +336,8 @@ The `Ui` class will then return the boolean `enterIsUsed`.
 If the user has pressed on any keys other than "Enter", the boolean `enterIsUsed` is set to false and it will remain in the loop. 
 If the user has pressed on the "Enter" button, the boolean `enterIsUsed` is set to true and it will exit out of the loop and proceed to the next question. 
 
+<div style="page-break-after: always;"></div>
+
 ### 2.4. Storage Component
 
 The storage component is implemented locally and mainly saves and loads files in JavaScript Object Notation (JSON) format, except for log files which are stored as normal text files.
@@ -316,12 +346,16 @@ The JSON format was chosen as it is a well-known standard which is easy to parse
 #### 2.4.1. Design of TopicsStorage
 
 Given data for the topics and questions is loaded automatically from JSON files in the data folder. This is mainly facilitated through the `TopicsStorage` 
-class which handles accessing the file as well as converting from JSON into `Topic`, `Question` and `Option` objects. The class diagram below shows this relationship.
+class which handles accessing the file as well as converting from JSON into `Topic`, `Question` and `Option` objects.
+The class diagram below shows this relationship.
 
 ![TopicsStorage Class Diagram](./images/TopicsStorage.png)
 
 The format of the JSON file is important as it is loaded in a particular way. This format has been designed as an array 
-of topics that hold the different properties for questions, options, hints and explanations. An example is as such:
+of topics that hold the different properties for questions, options, hints and explanations.
+An example is as such:
+
+<div style="page-break-after: always;"></div>
 
 ```json
 [
@@ -361,25 +395,32 @@ Users may choose to edit this data as well and are provided with the following r
 and there must be one and only one option chosen as the correct answer by specifying `true` as the value of the
 `correct` key.
 
+<div style="page-break-after: always;"></div>
+
 #### 2.4.2. Implementation of TopicsStorage
 
-When the user launches the app, the main program will initialize a `TopicsStorage` object and call the `load` method which will return an `ArrayList` of  `Topic` objects.
+When the user launches the app, the main program will initialize a `TopicsStorage` object and call the `load()` method which will return an `ArrayList` of  `Topic` objects.
 The following sequence diagram shows how the load operation works, focusing on how options are marked as correct:
 
 ![TopicsStorage::load Sequence Diagram](./images/TopicsStorage_load.png)
 
 As there is a high level of nesting in the JSON file, many methods are called in loops to parse each section and return them as objects which are then used to build the next object at a higher level.
 In the diagram above, the `Option` objects within each `Topic` has to be constructed with a description from the file.
-They are then marked as the correct answer with `markAsCorrectAnswer` if the value of the key `correct` was `true` in the given data.
+They are then marked as the correct answer with `markAsCorrectAnswer()` if the value of the key `correct` was `true` in the given data.
 More properties can easily be added to the classes and the storage component in a similar way, by parsing in loops.
+
+<div style="page-break-after: always;"></div>
 
 #### 2.4.3. Design of UserStorage
 
-In order to save and load attributes specific to each user, such as the questions attempted, answered correctly or bookmarked, a `UserStorage` class is used to selectively store these attributes into a JSON file, `user.json`. This class requires access to the main `TopicList` and `BookmarkList` from the Model component in order to extract these attributes. The class diagram below shows this relationship.
+In order to save and load attributes specific to each user, such as the questions attempted, answered correctly or bookmarked, a `UserStorage` class is used to selectively store these attributes into a JSON file, `user.json`.
+This class requires access to the main `TopicList` and `BookmarkList` from the Model component in order to extract these attributes. The class diagram below shows this relationship.
 
 ![UserStorage Class Diagram](./images/UserStorage.png)
 
-The attributes will be saved in the JSON file tied to each question in a topic and is identified by its description. A question's presence in the file represents that it has been attempted before while other attributes are stored as boolean values. An example is given below.
+The attributes will be saved in the JSON file tied to each question in a topic and is identified by its description.
+A question's presence in the file represents that it has been attempted before while other attributes are stored as boolean values.
+An example is given below.
 
 ```json
 [
@@ -418,20 +459,28 @@ Unlike `topics.json`, users should not be editing the `user.json` file as it is 
 If the user edits this file and does not follow the correct format then the affected parts of the data will be lost but the 
 program will continue to run.
 
+<div style="page-break-after: always;"></div>
+
 #### 2.4.4. Implementation of UserStorage
 
 Unlike `TopicsStorage` which constructs objects, `UserStorage` accesses existing objects in order to extract their attributes.
-The following sequence diagram shows an example of getting the topic description from a `Topic` object within the `TopicList`.
+The following sequence diagram shows an example of getting the topic description from a `Topic` object within the `TopicList` in order to save attributes for that particular `Topic` object.
 
 ![UserStorage::save Sequence Diagram](./images/UserStorage_save.png)
 
 It can be noted here that the `Topic` object is the same one constructed by `TopicsStorage` and continues to persist until the program shuts down.
+
 A similar method is used to extract the attributes from each `Question` object inside the `Topic` object.
-For example, the `wasAnsweredCorrectly` method is called on the `Question` object to check if it was answered
+For example, the `wasAnsweredCorrectly()` method is called on the `Question` object to check if it was answered
 correctly by the user or not.
 This value is then stored as an attribute of the question in the JSON file.
-Loading back the user data is done in reverse. If the boolean value of the key `correct` is true for a
-particular question, then the `markAsAnsweredCorrectly` method is called on the corresponding `Question` object.
+
+Loading back the user data is done in reverse. If the boolean value of the key `correct` is `true` for a
+particular question, then the `markAsAnsweredCorrectly()` method is called on the corresponding `Question` object. This is depicted below in the sequence diagram.
+
+![UserStorage::load Sequence Diagram](./images/UserStorage_load.png)
+
+<div style="page-break-after: always;"></div>
 
 ### 2.5. UI Component
 
@@ -452,6 +501,8 @@ The user inputs the number of questions that he wants to answer and also the top
 The `Ui` will go through printStartQuizQuestions() to print out the number of questions that the user has chosen. 
 Afterwards, the `Ui` will go through printStartQuizTopics() to print out the topics that the user has chosen. 
 
+<div style="page-break-after: always;"></div>
+
 ## 3. Product scope
 
 ### 3.1. Target user profile
@@ -466,6 +517,8 @@ platform and enhances their learning experience.
 It is a desktop application where CS2113/T students can attempt bite-sized quizzes, through the Command Line Interface (CLI), to test their understanding of the concepts taught, and serves to consolidate key concepts for easy revision.
 
 Students can earn points for themselves as they answer questions in the quizzes, and they can view their quizzes' statistics to gauge their level of mastery of the topics in CS2113/T.
+
+<div style="page-break-after: always;"></div>
 
 ## 4. User Stories
 
@@ -482,6 +535,7 @@ Students can earn points for themselves as they answer questions in the quizzes,
 |v2.0|busy, lazy user|take note of key concepts|refer to it easily at a later time|
 |v2.0|frequent disorganized user|view the percentage of error in each topic|tell how well I understand the content|
 
+<div style="page-break-after: always;"></div>
 
 ## 5. Non-Functional Requirements
 

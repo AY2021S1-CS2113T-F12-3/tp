@@ -2,6 +2,8 @@
 * Table of Contents
 {:toc}
 
+<div style="page-break-after: always;"></div>
+
 ## 1. Introduction
 
 E-Duke-8 (pronounced "Educate") helps CS2113/T students **learn and understand software engineering and [Object-oriented Programming (OOP)](#7-glossary) principles** through a gamified
@@ -15,12 +17,14 @@ Challenge your friends to see who can earn the most points on E-Duke-8!
 
 Understand more about E-Duke-8, and how you can use it to aid your learning, through this User Guide.
 
+<div style="page-break-after: always;"></div>
+
 ## 2. Quick Start
 
 1. Ensure that you have Java 11 or above installed.
 2. Download the latest version of **E-Duke-8** from [here](https://github.com/AY2021S1-CS2113T-F12-3/tp/releases).
 3. Copy the files to the folder you want to use for the application.
-4. If you have downloaded the jar file by itself, you will also need the question file, `topics.json`, found in `data.zip`. Therefore, after extracting `data.zip`, include the `data` folder and the `eduke8.jar` file in the same folder for E-Duke-8 to run smoothly. Alternatively, you can simply download `eduke8.zip`, which includes both the jar file along with the data folder, and extract it. 
+4. If you have downloaded the jar file by itself, you will also need the question file, `topics.json`, found in `data.zip`. Therefore, after extracting `data.zip`, include the `data` folder and the `eduke8.jar` file in the same folder for E-Duke-8 to run smoothly. Alternatively, you can simply download `eduke8.zip`, which includes both the jar file along with the data folder, and extract it. See section [**3.1 Loading Data**](#31-loading-data) for more infomation.
 5. Double click on eduke8.jar to start up the program. If the program does not start up, continue to step 6, otherwise skip to step 8.
 6. If double clicking on the jar file does not work, open up the command prompt in the same folder used in step 3.
 7. Enter the following command `java -jar eduke8.jar`.
@@ -34,11 +38,15 @@ Understand more about E-Duke-8, and how you can use it to aid your learning, thr
 
 9. Refer to the section on **Features** below for the full list of commands you can use and the details of each.
 
+<div style="page-break-after: always;"></div>
+
 ## 3. Features 
 
 ℹ️ Notes about the command format:
 - Words in UPPER_CASE are the parameters that you can specify for your usage.
 - e.g. in `quiz t/TOPIC n/NUM_QUESTIONS s/TIMER`, 'TOPIC' is a parameter that allows you to choose the topic you want the quiz to be based on, 'NUM_QUESTIONS' specifies the number of questions you want to have in your quiz, and 'TIMER' specifies the number of seconds given to complete each question. 
+
+<div style="page-break-after: always;"></div>
 
 ### 3.1. Loading Data 
 
@@ -52,17 +60,21 @@ If the data has been loaded successfully you should see this message:
 
 ![data loaded](./images/data_loaded.png)
 
-If you wish to edit the data available, such as adding your own questions to the question bank, then do follow the instructions found in [**4. FAQ**](#4-faq). However, it is recommended that you do this only after fully exploring E-Duke-8.
+If you wish to edit the data available, such as adding your own questions to the question bank, then do follow the instructions found in [**FAQ**](#4-faq). However, it is recommended that you do this only after fully exploring E-Duke-8.
 
-If have trouble opening E-Duke-8 and received the following warning message, then please refer to section [**6. Troubleshooting**](#6-troubleshooting) for help in resolving the issue.
+If have trouble opening E-Duke-8 and received the following warning message, then please refer to the section [**6. Troubleshooting**](#6-troubleshooting) for help in resolving the issue.
 
 ![data error](./images/data_error.png)
+
+<div style="page-break-after: always;"></div>
 
 ### 3.2. Welcome Page
 
 Upon successful startup, you should be greeted with a screen like this:
 
 ![welcome](./images/welcome.png)
+
+<div style="page-break-after: always;"></div>
 
 ### 3.3. Viewing E-Duke-8 information: `about`
 
@@ -77,6 +89,7 @@ What you should see:
 
 ![about](./images/about.png)
 
+<div style="page-break-after: always;"></div>
 
 ### 3.4. Viewing available commands: `help`
 
@@ -91,6 +104,7 @@ What you should see:
 
 ![help](./images/help.png)
 
+<div style="page-break-after: always;"></div>
 
 ### 3.5. Listing all topics: `topics`
 
@@ -107,6 +121,7 @@ What you should see:
 
 ![topics](./images/topics.png)
 
+<div style="page-break-after: always;"></div>
 
 ### 3.6. Accessing the CS2113T textbook content: `textbook`
 
@@ -121,6 +136,7 @@ What you should see:
 
 ![textbook](./images/textbook.png)
 
+<div style="page-break-after: always;"></div>
 
 ### 3.7. Starting a quiz: `quiz`
 
@@ -158,7 +174,7 @@ From here on you can either:
 
 1) Enter in your answer by typing '1', '2', '3' or '4' and pressing enter.
 
-2) If you do not know the answer, you can request for a hint by typing 'hint' and pressing enter. Refer to section [**3.8. Hint**](#38-showing-a-hint-hint) for more information.
+2) If you do not know the answer, you can request for a hint by typing 'hint' and pressing enter. Refer to  the [section on hints](#38-showing-a-hint-hint) for more information.
 
 If you have entered the correct answer, this is what you will see:
 ![quiz](./images/quiz_correct.png)
@@ -178,6 +194,8 @@ After attempting all of the questions, the quiz will automatically end:
 
 After the quiz ends, you will be prompted to enter in a new command. At this point, you are free to choose any feature of E-Duke-8 you want to access, or you can also start a new quiz!
 
+<div style="page-break-after: always;"></div>
+
 ### 3.8. Showing a hint: `hint`
 
 Shows a hint to the current question.
@@ -194,7 +212,9 @@ What you should see:
 Note: 
 - Once a hint is used for a question, it will be recorded into your [stats](#311-displaying-stats-stats).
 - When a hint is used, getting the question correct will earn you 1 point instead of 2.
-- Refer to [FAQ](#4-faq) to understand why you should use hint despite the penalties.
+- Refer to [**FAQ**](#4-faq) Q4 to understand why you should use hint despite the penalties.
+
+<div style="page-break-after: always;"></div>
 
 ### 3.9. Bookmarking a question: `bookmark`
 
@@ -208,11 +228,13 @@ Example of usage:
 bookmark
 ```
 
-What you should see:
+What you should see: 
 
-![bookmark](./images/bookmark_store.jpg)
+![bookmark](./images/bookmark_store.png)
 
-### 3.10. Listing out all bookmarked questions: `bookmark`
+<div style="page-break-after: always;"></div>
+
+### 3.10. Listing out all bookmarked questions: `bookmark list`
 
 Lists out all the bookmarked questions and each of their four options.
 
@@ -222,19 +244,23 @@ Note:
 
 Example of usage:
 ```
-bookmark
+bookmark list
 ```
 
 What you should see:
 
 ![data saving](./images/bookmark_list.jpg)
 
-### 3.11. Deleting a bookmark: `bookmark delete <index number>`
+<div style="page-break-after: always;"></div>
+
+### 3.11. Deleting a bookmark: `bookmark delete`
 
 Lists out all the bookmarked questions and each of their four options.
 
 Note:
 - Listing out all bookmarked questions can only be done in the main menu
+
+Input format: `bookmark delete INDEX`
 
 Example of usage:
 ```
@@ -244,6 +270,8 @@ bookmark delete 2
 What you should see:
 
 ![bookmark](./images/bookmark_delete.jpg)
+
+<div style="page-break-after: always;"></div>
 
 ### 3.12. Displaying stats: `stats`
 
@@ -266,6 +294,10 @@ This is an example of what you should see:
 
 ![stats_with_progress](./images/stats_Some_Progress.png)
 
+- Refer to [**FAQ**](#4-faq) for more information about the point system in E-Duke-8.
+
+<div style="page-break-after: always;"></div>
+
 ### 3.13. Adding a note: `note add`
 
 Adds a note to a specified topic.
@@ -283,6 +315,8 @@ What you should see:
 
 ![noteadd](./images/noteadd.png)
 
+<div style="page-break-after: always;"></div>
+
 ### 3.14. Deleting a note: `note delete`
 
 Deletes a note from a specific topic.
@@ -295,6 +329,8 @@ note delete
 What you should see:
 
 ![notedelete](./images/notedelete.png)
+
+<div style="page-break-after: always;"></div>
 
 ### 3.15. Listing out notes: `note list`
 
@@ -309,6 +345,8 @@ What you should see:
 
 ![notelist](./images/notelist.png)
 
+<div style="page-break-after: always;"></div>
+
 ### 3.16. Exiting the program: `exit`
 
 Exits E-Duke-8.
@@ -321,6 +359,8 @@ exit
 ```
 
 ![exit](./images/exit.png)
+
+<div style="page-break-after: always;"></div>
 
 ### 3.17. Saving user data
 
@@ -336,36 +376,38 @@ When the data has been saved successfully you should see this message:
 ![data saved](./images/data_saved.png)
 
 This is stored in the `user.json` file in the `data` folder and can be transferred between machines to keep your own
-history. Please do not attempt to edit this file as it will disrupt the running of application.
+history. Please do not attempt to edit this file as it will disrupt the running of application (Refer to [**FAQ**](#4-faq) Q7).
 If you want a better score you can always reattempt a quiz!
+
+<div style="page-break-after: always;"></div>
 
 ## 4. FAQ
 
-**Q**: Am I be able to re-attempt the same question after my quiz ends?
+**Q1**: Am I be able to re-attempt the same question after my quiz ends?
 
-**A**: Yes, you may. Questions for the quizzes are chosen randomly from all of the questions in a certain topic. Hence, there is a chance that the question you have attempted before gets chosen again if you choose to attempt another quiz from the same topic.
+**A1**: Yes, you may. Questions for the quizzes are chosen randomly from all of the questions in a certain topic. Hence, there is a chance that the question you have attempted before gets chosen again if you choose to attempt another quiz from the same topic.
 
-**Q**: Why does my stats only improve as I do more quizzes? Shouldn't the penalities from my previous quizzes remain?
+**Q2**: Why does my stats only improve as I do more quizzes? Shouldn't the penalities from my previous quizzes remain?
 
-**A**: E-Duke-8 tries to motivate you to understand CS2113/T concepts better. E-Duke-8 also encourages learning from failure. Therefore, you do not have to be disheartened by incorrect answers when attempting quizzes. Learn from the explanations given and get the question correct in your future quiz attempts to improve your stats!
+**A2**: E-Duke-8 tries to motivate you to understand CS2113/T concepts better. E-Duke-8 also encourages learning from failure. Therefore, you do not have to be disheartened by incorrect answers when attempting quizzes. Learn from the explanations given and get the question correct in your future quiz attempts to improve your stats!
 A correct answer in a future quiz attempt would also mean that you have come to understand the concept being tested in the question, and hence, you should deserve the points for it.  
 
-**Q**: Why does my hint usage indicator for a question not disappear after I re-attempt the question without using hint?
+**Q3**: Why does my hint usage indicator for a question not disappear after I re-attempt the question without using hint?
 
-**A**: This is because the hint usage serves as an indicator that you might still have some doubts in the topic, and hence you might want to read more about it. Resetting the count for hint usage might take away this benefit. 
+**A3**: This is because the hint usage serves as an indicator that you might still have some doubts in the topic, and hence you might want to read more about it. Resetting the count for hint usage might take away this benefit. 
 
-**Q**: Using hints will limit the total points that I can earn to build up my stats, so why should I still use hint?
+**Q4**: Using hints will limit the total points that I can earn to build up my stats, so why should I still use hint?
 
-**A**: While points you earn will indeed be lesser, you are still encouraged to use hint when answering questions to spur your thinking, or to confirm your thoughts. 
-       Hints might give you an alternative perspective to think about the question at hand, which may be helpful to how you answer similar questions in the future.
+**A4**: While points you earn will indeed be lesser, you are still encouraged to use hint when answering questions to spur your thinking, or to confirm your thoughts. 
+Hints might give you an alternative perspective to think about the question at hand, which may be helpful to how you answer similar questions in the future.
 
-**Q**: How are the points awarded for correct answers?
+**Q5**: How are the points awarded for correct answers?
 
-**A**: A correct answer without requesting for a hint will earn you **2 points**, whereas a correct answer with hint requested will earn you **1 point**. You will not be awarded any points for incorrect answers.
+**A5**: A correct answer without requesting for a hint will earn you **2 points**, whereas a correct answer with hint requested will earn you **1 point**. You will not be awarded any points for incorrect answers.
 
-**Q**: How do I change the questions in the quizzes?
+**Q6**: How do I change the questions in the quizzes?
 
-**A**: Open `topics.json` in any text editor to edit the questions, make sure to follow the format of the questions
+**A6**: Open `topics.json` in any text editor to edit the questions, make sure to follow the format of the questions
 already provided. An example is shown below.
 
 ```json
@@ -411,14 +453,16 @@ data might be erased.
 - Do refrain from adding duplicate questions because you can already re-attempt the same question if you start a quiz from the topic the question is from.
 - If duplicate questions are added, then you might find that the same question might appear more than once in your quiz.
 
-**Q**: What happens if I modify the user data in `user.json`?
+**Q7**: What happens if I modify the user data in `user.json`?
 
-**A**: If you wish to modify the user data, the application may not be able to load it successfully. You will 
+**A7**: If you wish to modify the user data, the application may not be able to load it successfully. You will 
 receive the following message, and the affected user data will be erased.
 
 ![user data error](./images/user_data_error.png)
 
 Therefore, it is recommended that you do not modify the user data. Do build up your stats by attempting more quizzes! 
+
+<div style="page-break-after: always;"></div>
 
 ## 5. Command summary
 
@@ -438,20 +482,27 @@ Therefore, it is recommended that you do not modify the user data. Do build up y
 | Listing out notes | `note list` | 
 | Exit        | `exit`                                                 |
 
+<div style="page-break-after: always;"></div>
+
 ## 6. Troubleshooting
 
 If you have trouble starting the application there could be two sources of error for loading data.
 Firstly, `topics.json` may not be present in the right folder.
-Please check inside the `data` folder followed by the `main` folder that `topics.json` is present.
+There should a `data` folder in the same folder as `eduke8.jar`.
+Please check inside the `data` folder followed by the `main` folder that the `topics.json` file is present.
 
 Next, it is possible that the format of data inside `topics.json` or `user.json` is wrong and thus cannot be parsed
-correctly. Please ensure that if you wish to edit the data in `topics.json`, such as to add questions, then you should follow the instructions found in [**4. FAQ**](#4-faq) carefully.
+correctly. Please ensure that if you wish to edit the data in `topics.json`, such as to add questions, then you should follow the instructions found in [**FAQ**](#4-faq) Q6 carefully.
 
-On the other hand, `user.json` should not be manually edited. If you have accidentally changed this file, you may delete
-the file to reset the data. A new file will be created on start up. 
+On the other hand, `user.json` should not be manually edited.
+If you have accidentally changed this file, you may delete
+the file to reset the data.
+A new file will be created on start up.
 
-If the above fixes do not work please download `data.zip` from the release page again and use its contents as the `data`
+If the above fixes do not work please download `data.zip` from the [release page](https://github.com/AY2021S1-CS2113T-F12-3/tp/releases) again and use its contents as the `data`
 folder.
+
+<div style="page-break-after: always;"></div>
 
 ## 7. Glossary
 

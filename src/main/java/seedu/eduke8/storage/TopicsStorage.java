@@ -44,6 +44,7 @@ public class TopicsStorage extends LocalStorage {
      * @throws ParseException  If the file contents cannot be parsed as a JSON.
      * @throws ClassCastException If the the nesting of arrays and objects in the JSON is wrong
      * @throws NullPointerException If the keys required are not present in the file.
+     * @throws Eduke8Exception      If the file has been tampered with wrongly.
      */
     @Override
     public ArrayList<Displayable> load()

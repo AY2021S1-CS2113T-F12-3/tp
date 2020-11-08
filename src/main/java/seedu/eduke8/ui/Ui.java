@@ -62,7 +62,7 @@ public class Ui {
             + System.lineSeparator() + "3) topics"
             + System.lineSeparator() + "4) textbook"
             + System.lineSeparator() + "5) quiz t/<topic> n/<number of questions> s/<time given to complete 1 question>"
-            + System.lineSeparator() + "6) bookmark"
+            + System.lineSeparator() + "6) bookmark list / bookmark delete"
             + System.lineSeparator() + "7) stats"
             + System.lineSeparator() + "8) note add / note delete / note list"
             + System.lineSeparator() + "9) exit (saves your data too!)";
@@ -408,20 +408,20 @@ public class Ui {
             ui.printNoteList(noteList);
 
             System.out.println(DELETE_NOTE_PROMPT_FOR_INDEX);
-            String input = SCANNER.nextLine();
+            String input = SCANNER.nextLine().trim();
 
             if (input.matches(NUMBERS_ONLY) && Integer.parseInt(input) > 0
                     && Integer.parseInt(input) <= noteList.getCount()) {
                 int index = Integer.parseInt(input);
                 topic.getNoteList().delete(index - 1);
-                System.out.println(DELETE_NOTE_SUCCESSFULLY);
+                printMessage(DELETE_NOTE_SUCCESSFULLY);
             } else {
                 printMessage(INVALID_TOPIC_INDEX + System.lineSeparator() + DELETE_NOTE_UNSUCCESSFULLY);
             }
         } else {
             System.out.println(INVALID_TOPIC);
             ui.printTopicsError(topicList);
-            System.out.println(INPUT_ERROR + "\n" + DELETE_NOTE_UNSUCCESSFULLY);
+            printMessage(INPUT_ERROR + "\n" + DELETE_NOTE_UNSUCCESSFULLY);
         }
     }
 
